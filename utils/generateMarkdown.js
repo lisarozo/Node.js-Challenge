@@ -27,14 +27,23 @@ function generateMarkdown(data) {
      }
 
   return `# ${data.title} ${chosenLicense}
+  Developers current mood; ${data.mood}
   ## Description
 
   This is a short description of this application: ${data.description}
-      
-  [This is a link to Google](https://www.google.com)
-  
-  This is a link to my Github profile:  https://github.com/lisarozo/Node.js-Challenge
 
+
+  This is the license we are using  ${data.license}
+  
+  This is the command to installing the project ${data.installation}
+  
+  This is the command to test your project ${data.test} 
+
+  In order to contribute please follow this ${data.contribute}
+
+  This is a link to my Github profile: ${data.github}
+
+  This is my email address  ${data.email}
   `;
 }
 
