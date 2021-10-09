@@ -17,9 +17,9 @@ const questions = [
   },
   {
     type: "list",
-    message: "Which juice is best?",
-    choices: ["Orange Juice", "Apple Juice", "Grape Juice", "Lemon Juice"],
-    name: "juiceChoice",
+    message: "Which license are we using?",
+    choices: ["MIT", "Mozilla", "GNU"],
+    name: "license",
   },
   {
     type: "input",

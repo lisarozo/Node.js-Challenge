@@ -11,14 +11,26 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+
 function generateMarkdown(data) {
-  return `# ${data.title}
+  let chosenLicense = ""
+
+  if(data.license == "MIT") {
+    chosenLicense = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  }else if(data.license == "Mozilla"){
+    chosenLicense = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+  }
+
+  return `# ${data.title} ${chosenLicense}
   ## Description
 
   This is a short description of this application: ${data.description}
       
   [This is a link to Google](https://www.google.com)
-`;
+  
+  This is a link to my Github profile:  https://github.com/lisarozo/Node.js-Challenge
+
+  `;
 }
 
 module.exports = generateMarkdown;
